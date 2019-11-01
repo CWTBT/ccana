@@ -18,10 +18,11 @@ class IndexView(generic.ListView):
 def create(request):
     if (request.method=='POST'):
         form = EventForm(request.POST)
-        if form.is_valid():
-            e = form.save(commit=False)
-            e.save();
-            return HttpResponseRedirect(reverse('registration:index'))
+        print("processing post")
+        print(reverse('registration:index'))
+        e = form.save(commit=False)
+        e.save();
+        return HttpResponseRedirect(reverse('registration:index'))
     else:
         print("create serving non-post");
         form = EventForm();
