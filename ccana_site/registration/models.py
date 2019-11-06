@@ -5,8 +5,8 @@ class Event(models.Model):
     name = models.CharField('Event Name', max_length=200)
     description = models.CharField(max_length=200)
     location = models.CharField(max_length=120)
-    start_time = models.DateTimeField(auto_now_add=True)
-    end_time = models.DateTimeField(auto_now_add=True)
+    start_time = models.DateTimeField()
+    end_time = models.DateTimeField()
 
     def __str__(self):
         return self.name
