@@ -6,6 +6,4 @@ class EventForm(forms.ModelForm):
     class Meta:
         model = Event
         exclude = ()
-        #fields = ('name', 'description','location','start_time','end_time')
-        widgets = {'start_time': forms.DateTimeInput(attrs={'type': 'datetime-local'}),
-                   'end_time': forms.DateTimeInput(attrs={'type': 'datetime-local'})}
+        fields = ['name', 'description','location','start_time','end_time']

@@ -5,6 +5,7 @@ from django.views import generic
 
 from .models import Event
 from .forms import EventForm
+from datetime import datetime
 
 class IndexView(generic.ListView):
     template_name = 'registration/index.html'
@@ -12,7 +13,7 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         """Return the last five published questions."""
-        return Event.objects.order_by('-start_time').reverse()
+        return Event.objects.order_by('-start_time').reverse().filter(end_time__gt = datetime.now())
 
 
 def create(request):
