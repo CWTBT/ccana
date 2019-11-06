@@ -4,22 +4,6 @@
   float:left;
 }
 
-li{
-  display: inline;
-  text-align: center;
-  border-bottom: 1px solid #555;
-}
-
-li a:hover:not(.active) {
-  background-color: #555;
-  color: white;
-}
-
-li a.active {
-  background-color: red;
-  color: white;
-}
-
-li:last-child {
-  border-bottom: none;
+h2{
+  font-family: 'Sunshiney', cursive;
 }
