@@ -1,0 +1,4 @@
+Whites = #ebebeb
+Blues = #032355
+	#014990
+Reds = #ee3023
