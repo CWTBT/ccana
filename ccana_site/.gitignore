@@ -1,0 +1,6 @@
+db.sqlite3
+ccana_site/__pycache__/
+home/__pycache__/
+home/migrations/
+registration/migrations/
+registration/__pycache__/
