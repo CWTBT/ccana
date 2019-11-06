@@ -1,0 +1,6 @@
+/ccana_site/db.sqlite3
+/ccana_site/ccana_site/__pycache__/
+/ccana_site/home/__pycache__/
+/ccana_site/home/migrations/
+/ccana_site/registration/migrations/
+/ccana_site/registration/__pycache__/
