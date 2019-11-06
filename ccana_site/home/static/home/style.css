@@ -4,6 +4,14 @@
   float:left;
 }
 
+.jumbotron {
+  margin: 25px;
+  background-image: url("images/ChildcareAwareLogoTemp.PNG");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center center;
+}
+
 li{
   display: inline;
   text-align: center;
