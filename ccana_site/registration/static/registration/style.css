@@ -5,3 +5,14 @@
   background-size: auto 100%;
   background-position: center center;
 }
+.large-text {
+  font-size: 1.5em;
+}
+.small-text {
+  font-size: .9em;
+  color:grey;
+}
+
+.right {
+  float: right;
+}

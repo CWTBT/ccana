@@ -15,16 +15,17 @@ class IndexView(generic.ListView):
         """Return the last five published questions."""
         return Event.objects.order_by('-start_time').reverse().filter(end_time__gt = datetime.now())
 
+class EventCreate(generic.edit.CreateView):
+    model = Event
+    fields = ['name', 'description','location','start_time','end_time']
+    success_url = '/registration'
 
-def create(request):
-    if (request.method=='POST'):
-        form = EventForm(request.POST)
-        print("processing post")
-        print(reverse('registration:index'))
-        e = form.save(commit=False)
-        e.save();
-        return HttpResponseRedirect(reverse('registration:index'))
-    else:
-        print("create serving non-post");
-        form = EventForm();
-        return render(request, 'registration/create.html',{'form':form})
+class EventUpdate(generic.edit.UpdateView):
+    model = Event
+    fields = ['name', 'description','location','start_time','end_time']
+    template_name_suffix = '_update_form'
+    success_url = '/registration'
+
+class EventDelete(generic.edit.DeleteView):
+    model = Event
+    success_url = '/registration'
