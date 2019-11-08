@@ -4,7 +4,6 @@ from django.urls import reverse
 from django.views import generic
 
 from .models import Event
-from .forms import EventForm
 from datetime import datetime
 
 class IndexView(generic.ListView):
