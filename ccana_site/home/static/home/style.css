@@ -4,13 +4,18 @@
   float:left;
 }
 
+#page-head{
+  background-image: url("images/ChildcareAwareLogoTemp.PNG");
+}
+
+
 .jumbotron {
   margin: 25px;
-  background-image: url("images/ChildcareAwareLogoTemp.PNG");
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center center;
 }
+
 
 /* navbar */
 .navbar-default {
@@ -115,15 +120,26 @@ nav li{
 }
 
 h2{
-  font-family: 'Sunshiney', cursive;
+  font-family: 'Sunshiney', serif;
   font-size: 50px;
+  text-align: center;
+}
+h3{
+  font-family: 'Josefin Sans', cursive;
 }
 a{
-  font-family: 'Sunshiney', cursive;
+  font-family: 'Josefin Sans', cursive;
   font-size: 25px;
+}
+p{
+  font-family: 'Indie Flower',cursive;
 }
 
 .row {
  width: 100%;
  text-align: center;
+}
+
+.container-fluid{
+  min-height: 200px;
 }
