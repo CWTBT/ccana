@@ -117,6 +117,7 @@ nav li{
   width: 100%;
   display: flex;
   padding-right: 40px;
+  font-family: 'Josefin Sans', cursive;
 }
 
 h2{
@@ -129,10 +130,11 @@ h3{
 }
 a{
   font-family: 'Josefin Sans', cursive;
-  font-size: 25px;
+  font-size: 50px;
 }
 p{
   font-family: 'Indie Flower',cursive;
+  font-size: 50px;
 }
 
 .row {
@@ -141,5 +143,10 @@ p{
 }
 
 .container-fluid{
-  min-height: 200px;
+}
+
+footer{
+  width: 100%;
+  min-height: 100px;
+  
 }
