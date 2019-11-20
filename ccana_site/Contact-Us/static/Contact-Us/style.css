@@ -1,0 +1,166 @@
+#CCANA-icon{
+  width:50%;
+  height:50%;
+  float:left;
+}
+
+#page-head{
+  background-image: url("images/ChildcareAwareLogoTemp.PNG");
+}
+
+
+.jumbotron {
+  margin: 25px;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center center;
+}
+
+
+/* navbar */
+.navbar-default {
+  background-color: #ee3023;
+  border-color: #c0392b;
+}
+.navbar-default .navbar-brand {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #ffc4c5;
+}
+.navbar-default .navbar-text {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ffc4c5;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #ee3023;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #ffc4c5;
+  background-color: #c0392b;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li.divider {
+  background-color: #c0392b;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #ffc4c5;
+  background-color: #c0392b;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #ffc4c5;
+  background-color: #c0392b;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #ffc4c5;
+  background-color: #c0392b;
+}
+.navbar-default .navbar-toggle {
+  border-color: #c0392b;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #c0392b;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ecf0f1;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+  color: #ffc4c5;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ecf0f1;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffc4c5;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffc4c5;
+    background-color: #c0392b;
+  }
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-around;
+}
+
+nav li{
+  width: 100%;
+  display: flex;
+  padding-right: 40px;
+  font-family: 'Josefin Sans', cursive;
+}
+
+h1{
+  font-family: 'Josefin Sans', serif;
+  font-size: 80px;
+  text-align: center;
+}
+h3{
+  font-family: 'Josefin Sans', cursive;
+  font-size: 40px;
+}
+a{
+  font-family: 'Josefin Sans', cursive;
+  font-size: 30px;
+}
+p{
+  font-family: 'Josefin Sans',cursive;
+  font-size: 40px;
+}
+li{
+  font-size: 20px;
+  font-family: 'Josefin Sans'
+}
+
+.row {
+ width: 100%;
+ text-align: center;
+}
+
+.container-fluid{
+}
+
+footer{
+  width: 100%;
+  min-height: 100px;
+}
+
+#motto .page-header{
+  height: 280px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  justify-content: center;
+  font-variant: small-caps;
+  background-color: #014990;
+  color: white;
+}
