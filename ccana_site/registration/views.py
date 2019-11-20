@@ -3,7 +3,8 @@ from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
 
-from .models import Event
+from .forms import AttendanceForm
+from .models import Event, Attendance, User
 from datetime import datetime
 
 class IndexView(generic.ListView):
@@ -28,3 +29,33 @@ class EventUpdate(generic.edit.UpdateView):
 class EventDelete(generic.edit.DeleteView):
     model = Event
     success_url = '/registration'
+
+def attend(request):
+   form = AttendanceForm()
+   print('serving attend')
+   if request.method == "POST":
+      print('attendance post')
+      form = AttendanceForm(request.POST)
+      if form.is_valid():
+          data = form.cleaned_data
+          update_dict = {}
+          name = data['name'].split()
+          phone = data['phone']
+          email = data['email']
+          update_dict['id']=data['id']
+          update_dict['first_name']=name[0]
+          update_dict['last_name']=name[1]
+          if (data['phone']!=''):
+              update_dict['phone']=data['phone']
+          if (data['email']!=''):
+              update_dict['email']=data['email']
+          event = data['event']
+          (u,_) = User.objects.filter(pk=data['id']).update_or_create(update_dict)
+          a = Attendance(user = u,event = event)
+          a.save()
+          return HttpResponseRedirect('/')
+   errors = form.errors or None
+   return render(request, 'registration/attendance_form.html',{
+          'form': form,
+          'errors': errors,
+   })
