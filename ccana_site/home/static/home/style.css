@@ -120,21 +120,26 @@ nav li{
   font-family: 'Josefin Sans', cursive;
 }
 
-h2{
-  font-family: 'Sunshiney', serif;
-  font-size: 50px;
+h1{
+  font-family: 'Josefin Sans', serif;
+  font-size: 80px;
   text-align: center;
 }
 h3{
   font-family: 'Josefin Sans', cursive;
+  font-size: 40px;
 }
 a{
   font-family: 'Josefin Sans', cursive;
-  font-size: 50px;
+  font-size: 30px;
 }
 p{
-  font-family: 'Indie Flower',cursive;
-  font-size: 50px;
+  font-family: 'Josefin Sans',cursive;
+  font-size: 40px;
+}
+li{
+  font-size: 20px;
+  font-family: 'Josefin Sans'
 }
 
 .row {
@@ -148,5 +153,14 @@ p{
 footer{
   width: 100%;
   min-height: 100px;
-  
+}
+
+#motto .page-header{
+  height: 280px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  justify-content: center;
+  font-variant: small-caps;
+  background-color: #014990;
+  color: white;
 }
