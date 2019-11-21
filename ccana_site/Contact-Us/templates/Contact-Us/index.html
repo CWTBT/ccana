@@ -47,6 +47,39 @@
     </p>
     <p>Hours of Operation: Monday-Thursday 8:00 a.m.-5:00 p.m.<br />                                 Friday 8:00 a.m.- 12:00 p.m.<br /><br />(Contact via email from staff is possible during hours of non-operation)</p>
     <p>Please fill out the form below to contact us.</p>
+<!-- https://www.w3schools.com/html/html_forms.asp -->
+    <form action="contact-us/" method="post" class="form">
+    <input type="hidden" name="nospam:blank" value="" />
+
+    <label for="name">
+        Your Name<br />
+    </label>
+
+    <input class="fd" type="text" name="name:required" id="name" value="" />
+<br /><br />
+    <label for="email">
+        Your Email Address<br />
+    </label>
+
+    <input class="fd" type="text" name="email:email:required" id="email" value="" />
+<br /><br />
+    <label for="telephone">
+        Phone Number<br />
+    </label>
+
+    <input class="fd" type="text" name="telephone:required" id="telephone" value="" />
+<br /><br />
+    <label for="text">
+        Questions/Comments<br /> 
+    </label><br />
+    <textarea name="text::stripTags" id="text" rows="7" value=""></textarea>
+
+    <br class="clear" />
+
+    <div class="form-buttons">
+        <input class="button" type="submit" value="Submit" />
+    </div>
+</form>
 
   </div>
   <footer>
