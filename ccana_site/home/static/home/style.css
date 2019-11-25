@@ -164,3 +164,10 @@ footer{
   background-color: #014990;
   color: white;
 }
+
+.rectangle{
+  width: 100px;
+  height: 25px;
+  color:#014990;
+
+}
