@@ -6,7 +6,7 @@ from home.forms import ContactForm
 # Create your views here.
 def index(request):
     return render(request, 'home/index.html')
-    
+
 def parents(request):
     return render(request, 'home/parents.html')
 
@@ -21,7 +21,7 @@ def sponsors(request):
 
 def contact(request):
     form_class = ContactForm
-     if form.is_valid():
+    if form.is_valid():
             contact_name = request.POST.get(
                 'contact_name'
             , '')
