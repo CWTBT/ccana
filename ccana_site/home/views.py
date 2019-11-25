@@ -5,3 +5,6 @@ from django.http import HttpResponseRedirect
 # Create your views here.
 def index(request):
     return render(request, 'home/index.html')
+
+def referral(request):
+    return render(request, 'referral/referral.html')
