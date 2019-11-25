@@ -114,13 +114,14 @@ body{
 
 nav ul{
   display: flex;
-  justify-content: space-around;
+  justify-content:space-around;
 }
 
 nav li{
   width: 100%;
   display: flex;
-  padding-right: 40px;
+  padding-right: 10px;
+  white-space: nowrap;
 }
 
 h1{
@@ -129,9 +130,10 @@ h1{
 }
 h3{
   font-size: 40px;
+  font-variant: small-caps;
 }
 a{
-  font-size: 30px;
+  font-size: 20px;
 }
 p{
   font-size: 40px;
