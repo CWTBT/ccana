@@ -6,5 +6,25 @@ from django.http import HttpResponseRedirect
 def index(request):
     return render(request, 'home/index.html')
 
+<<<<<<< HEAD
 def referral(request):
     return render(request, 'referral/referral.html')
+=======
+def parents(request):
+    return render(parents, 'home/parents.html')
+
+def providers(request):
+    return render(providers, 'home/providers.html')
+
+def staff(request):
+    return render(staff, 'home/staff.html')
+
+def sponsors(request):
+    return render(sponsors, 'home/sponsors.html')
+
+def contact(request):
+    form_class = ContactForm
+
+    return render(request, 'contact.html', {
+        'form': form_class,
+    })
