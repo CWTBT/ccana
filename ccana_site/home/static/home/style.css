@@ -1,3 +1,7 @@
+body{
+  font-family: 'Josefin Sans', cursive;
+}
+
 #CCANA-icon{
   width:50%;
   height:50%;
@@ -117,29 +121,23 @@ nav li{
   width: 100%;
   display: flex;
   padding-right: 40px;
-  font-family: 'Josefin Sans', cursive;
 }
 
 h1{
-  font-family: 'Josefin Sans', serif;
   font-size: 80px;
   text-align: center;
 }
 h3{
-  font-family: 'Josefin Sans', cursive;
   font-size: 40px;
 }
 a{
-  font-family: 'Josefin Sans', cursive;
   font-size: 30px;
 }
 p{
-  font-family: 'Josefin Sans',cursive;
   font-size: 40px;
 }
 li{
   font-size: 20px;
-  font-family: 'Josefin Sans'
 }
 
 .row {
