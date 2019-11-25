@@ -6,7 +6,7 @@ from home.forms import ContactForm
 # Create your views here.
 def index(request):
     return render(request, 'home/index.html')
-
+    
 def parents(request):
     return render(request, 'home/parents.html')
 
