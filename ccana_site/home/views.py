@@ -5,11 +5,7 @@ from django.http import HttpResponseRedirect
 # Create your views here.
 def index(request):
     return render(request, 'home/index.html')
-
-<<<<<<< HEAD
-def referral(request):
-    return render(request, 'referral/referral.html')
-=======
+    
 def parents(request):
     return render(parents, 'home/parents.html')
 
