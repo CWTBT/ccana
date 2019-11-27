@@ -18,6 +18,7 @@ body{
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center center;
+  text-align: center;
 }
 
 
@@ -125,19 +126,48 @@ nav li{
 }
 
 h1{
-  font-size: 80px;
+  font-size: 60px;
   text-align: center;
+  overflow-x:auto;
+  display: inline-block;
 }
+
 h3{
   font-size: 40px;
   font-variant: small-caps;
 }
+
 a{
   font-size: 20px;
 }
+
 p{
-  font-size: 40px;
+  font-size: 25px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
+
+.border{
+  border: 20px;
+  border-style: solid;
+  border-color: #ee3023;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: inline-block;
+}
+
+.border2{
+  border: 10px;
+  border-style: double;
+  border-color: #ee3023;
+  display: inline-block;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 20px;
+}
+
 li{
   font-size: 20px;
 }
@@ -147,27 +177,40 @@ li{
  text-align: center;
 }
 
-.container-fluid{
-}
-
 footer{
   width: 100%;
   min-height: 100px;
 }
 
-#motto .page-header{
-  height: 280px;
-  padding-top: 30px;
-  padding-bottom: 20px;
+.container-fluid{
+  overflow: auto;
+  display: inline-flex;
+  padding: 0px;
+  margin: 15px;
+}
+
+#motto{
+  min-width: 500px;
+  height: 350px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding: 30px;
   justify-content: center;
   font-variant: small-caps;
   background-color: #014990;
   color: white;
+  display: flex;
+  overflow: auto;
+  flex-wrap: wrap;
 }
 
-.rectangle{
-  width: 100px;
-  height: 25px;
-  color:#014990;
-
+#rectangle{
+  width: 50%;
+  height: 7px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  background-color: #014990;
+  display: inline-block;
 }
