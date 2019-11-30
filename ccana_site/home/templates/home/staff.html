@@ -1,29 +1,10 @@
-{% load static %}
-<html>
-  <head>
-    <title>CCANA Staff</title>
-    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Sunshiney|Josefin+Sans|Indie+Flower&display=swap" rel="stylesheet">
-    <meta charset="utf-8">
-    <link rel="shortcut icon" href="{% static 'home/images/ChildcareAwareWebLogo.ico' %}">
-  </head>
-  <body>
-    <div id = "page-head" class ="jumbotron" style="background-color: transparent">
+{% extends "home/index.html"%}
 
-    </div>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-          <ul class="nav navbar-nav nav-fill">
-            <li><a href="/"> Home </a></li>
-            <li><a href="/parents"> Parents </a></li>
-            <li><a href="/providers"> Provider </a></li>
-            <li><a href="#"> Staff </a></li>
-            <li><a href="/sponsors"> Sponsors </a></li>
-            <li><a href="#"> Training/Events </a></li>
-            <li><a href="#"> Help me find Child Care </a></li>
-          </ul>
-      </div>
-    </nav>
-  </body>
-</html>
+{% block title%} Staff {% endblock %}
+
+
+{% block content %}
+
+<p> placeholder content </p>
+
+{% endblock %}

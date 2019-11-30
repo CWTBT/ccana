@@ -1,7 +1,11 @@
 {% load static %}
 <html>
   <head>
-    <title>CCANA Home Page</title>
+    <title>
+        {% block title %}
+        CCANA Home Page
+        {% endblock %}
+      </title>
     <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Sunshiney|Josefin+Sans|Indie+Flower&display=swap" rel="stylesheet">
@@ -15,16 +19,17 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
           <ul class="nav navbar-nav nav-fill">
-            <li><a href=""> Home </a></li>
+            <li><a href="/"> Home </a></li>
             <li><a href="/parents"> Parents </a></li>
             <li><a href="/providers"> Provider </a></li>
             <li><a href="/staff"> Staff </a></li>
             <li><a href="/sponsors"> Sponsors </a></li>
-            <li><a href="#"> Training/Events </a></li>
+            <li><a href="/registration"> Training/Events </a></li>
             <li><a href="/contact_us"> Contact Us </a></li>
           </ul>
       </div>
     </nav>
+    {% block content %}
     <div id="motto">
       <div class="border2">
         <div class="container-fluid">
@@ -58,6 +63,7 @@
       <img src="{% static "images/CountiesMap.jpg" %}">
     </div>
 
+  {% endblock %}
   </body>
   <footer>
     <div class="jumbotron jumbotron-fluid">
