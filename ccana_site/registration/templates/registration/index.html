@@ -1,9 +1,8 @@
+{% extends "home/index.html" %}
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'registration/style.css' %}">
+{% block title %} Upcoming Events {% endblock %}
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
+{% block content %}
 {% if event_list %}
 <div class="container">
       <ul>
@@ -23,3 +22,4 @@
 {% else %}
     <p>There are no events scheduled in the near future.</p>
 {% endif %}
+{% endblock %}

@@ -1,4 +1,6 @@
-{% load static %}
+{% extends "home/index.html" %}
+{% block title %} Attendance {% endblock %}
+{% block content%}
 <form method="post">
 {%csrf_token%}
 
@@ -21,3 +23,5 @@
 <p>There are no upcoming or ongoing events for you to attend.</p>
 {% endif %}
 </form>
+
+{% endblock %}
