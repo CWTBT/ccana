@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
 from home.forms import ContactForm
+from django import forms
+
 
 
 # Create your views here.
@@ -32,6 +34,6 @@ def contact(request):
             email.send()
             return redirect('contact')
 
-    return render(request, 'contact.html', {
+    return render(request, 'Contact-Us.html', {
         'form': form_class,
     })
