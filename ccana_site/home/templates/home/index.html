@@ -18,6 +18,11 @@
     </div>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
+        <div class = "navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-items" aria-expanded="false">
+        </div>
+
+        <div class="collapse navbar-collapse" id="nav-items">
           <ul class="nav navbar-nav nav-fill">
             <li><a href="/"> Home </a></li>
             <li><a href="/parents"> Parents </a></li>
@@ -27,6 +32,8 @@
             <li><a href="/registration"> Training/Events </a></li>
             <li><a href="/contact_us"> Contact Us </a></li>
           </ul>
+        </div>
+
       </div>
     </nav>
     {% block content %}
