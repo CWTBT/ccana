@@ -23,6 +23,9 @@ body{
 
 
 /* navbar */
+.navbar-toggle {
+  margin-left: 15px;
+}
 .navbar-default {
   background-color: #ee3023;
   border-color: #c0392b;
