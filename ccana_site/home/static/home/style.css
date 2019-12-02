@@ -21,6 +21,11 @@ body{
   text-align: center;
 }
 
+.jumbotron.jumbotron-fluid{
+  padding-top: 0px;
+  padding-bottom: 7px;
+}
+
 
 /* navbar */
 .navbar-toggle {
@@ -153,6 +158,11 @@ p{
 }
 
 
+.col-sm-4{
+  float: left;
+}
+
+
 .border{
   border: 20px;
   border-style: solid;
@@ -217,4 +227,16 @@ footer{
   margin-bottom: 80px;
   background-color: #014990;
   display: inline-block;
+}
+
+.col-sm-4 p{
+  font-size: 15px;
+  margin: 0px;
+  padding-bottom: 3px;
+  white-space: pre-line;
+  display:block;
+}
+
+span{
+  float: left;
 }
