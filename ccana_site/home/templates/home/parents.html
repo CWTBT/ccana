@@ -1,10 +1,73 @@
 {% extends "home/index.html"%}
-
-{% block title%} Parents {% endblock %}
-
-
+{% load static %}
+  <head>
+    <title>
+      {% block title %}
+      CCANA Parents Page
+      {% endblock %}
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+          <ul class="nav navbar-nav nav-fill">
+            <li><a href="/"> Home </a></li>
+            <li><a href="#"> Parents </a></li>
+            <li><a href="/providers"> Provider </a></li>
+            <li><a href="/staff"> Staff </a></li>
+            <li><a href="/sponsors"> Sponsors </a></li>
+            <li><a href="#"> Training/Events </a></li>
+            <li><a href="#"> Help me find Child Care </a></li>
+          </ul>
+      </div>
+    </nav>
 {% block content %}
-
-<p> placeholder content </p>
-
-{% endblock %}
+      <img src="{% static "home/images/ParentsPageImage.jpg" %}" class="img-responsive"></img>
+    <div id="rectangle"></div>
+    <div class="container-fluid border">
+      <p class="text-center"> We are ready to assist you in locating your child care options in Northcentral Arkansas. To place a referral online, refer to the navigation pane to the right and click on "Help Me Find Child Care". Fill out the required information and a referral agent will contact you shortly.</h3>
+    </div>
+    <div>
+      <div id="rectangle"></div>
+    </div>
+    <div class="container-fluid h-50">
+      <h3 class="text-center"> Our services include:</h3>
+      <ul>
+        <li>A complete, up-to-date listing of registered and licensed child care homes, centers, preschools and Mother’s Day Out programs in your area.</li>
+        <li>Information on how to choose a child care provider.</li>
+        <li>A parent's checklist for evaluating the quality of a child care program.</li>
+        <li>Assistance in solving problems.</li>
+        <li>Opt in for email updates and newsletters.</li>
+        <li>Referrals to other service programs.</li>
+      </ul>
+    </div>
+    <div>
+      <div id="rectangle"></div>
+    </div>
+    <div class="container-fluid h-50">
+      <h3 class="text-center"> When searching for care, look for those who...</h3>
+      <ul>
+        <li>Enjoy working with young children.</li>
+        <li>Give young children plenty of individual attention.</li>
+        <li>Understand how young children learn.</li>
+        <li>Speak gently to children.</li>
+        <li>Establish routines for activities.</li>
+        <li>Are responsive to parents' concerns about their children.</li>
+        <li>Accept and discipline children through helping, teaching, and learning.</li>
+      </ul>
+    </div>
+    <div>
+      <div id="rectangle"></div>
+    </div>
+    <div class="container-fluid h-50">
+      <h3 class="text-center"> Also look for...</h3>
+      <ul>
+        <li>Clean, pleasant surroundings.</li>
+        <li>Nutritious meals and snacks that are varied, attractive, and served at appropriate times.</li>
+        <li>A balance of active and quiet play times.</li>
+        <li>Age-appropriate toys, books, art and music materials.</li>
+        <li>Indoor and outdoor play areas that are safe and secure, and promote a child's urge to explore.</li>
+        <li>Click Here to Download a Better Beginnings Checklist</li>
+      </ul>
+    </div>
+    {% endblock %}
+</body>
