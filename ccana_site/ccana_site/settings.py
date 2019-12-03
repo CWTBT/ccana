@@ -25,7 +25,7 @@ SECRET_KEY = '2=vd**u0rzd-k-45u_)p^^owrj#)w4f8)udyb%n@ad$xg74(bb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -124,3 +124,13 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+#For the moment this will just post any sent email in the console.
+#Really sending emails will have to be set up much later
+#and we will have to find an smtp service to set it up with
+EMAIL_BACKEND ='django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = ''
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False
+EMAIL_PORT = 1025

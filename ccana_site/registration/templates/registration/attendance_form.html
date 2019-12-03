@@ -1,35 +1,27 @@
-{% load static %}
+{% extends "home/index.html" %}
+{% block title %} Attendance {% endblock %}
+{% block content%}
 <form method="post">
 {%csrf_token%}
 
-<div class="fieldWrapper">
-    {{ form.event.errors }}
-    <label for="{{ form.name.id_for_label }}">Event Name:</label>
-    {{ form.event }}
-</div>
+{% if form.fields.event.queryset %}
 
-<div class="fieldWrapper">
-    {{ form.id.errors }}
-    <label for="{{ form.id.id_for_label }}">Your ID Number:</label>
-    {{ form.id }}
-</div>
-
-<div class="fieldWrapper">
-    {{ form.name.errors }}
-    <label for="{{ form.name.id_for_label }}">Your Name (first and last):</label>
-    {{ form.name }}
-</div>
-
-<div class="fieldWrapper">
-    {{ form.email.errors }}
-    <label for="{{ form.email.id_for_label }}">Email address:</label>
-    {{ form.email }}
-</div>
-
-<div class="fieldWrapper">
-    {{ form.phone.errors }}
-    <label for="{{ form.phone.id_for_label }}">Phone Number:</label>
-    {{ form.phone }}
-</div>
+{% for field in form %}
+    <div class="fieldWrapper">
+        {{ field.errors }}
+        {{ field.label_tag }}
+    {% if field.field.required %}
+        <span style="color:red">*</span>
+    {% endif %} {{ field }}
+        {% if field.help_text %}
+        <p class="help">{{ field.help_text|safe }}</p>
+        {% endif %}
+    </div>
+{% endfor %}
   <input type="submit" value="Save">
+{% else %}
+<p>There are no upcoming or ongoing events for you to attend.</p>
+{% endif %}
 </form>
+
+{% endblock %}

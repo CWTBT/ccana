@@ -1,9 +1,9 @@
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'registration/style.css' %}">
+{% extends "home/index.html" %}
+{% block title %} Event Deletion {% endblock %}
+{% block content%}
 
-<link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-
-<form method="post">{% csrf_token %}
+<form method="post">
+  {% csrf_token %}
     <p>Are you sure you want to delete the following event?</p>
 <div class="row">
     <div class="center large-text bg-info col-md-offset-4 col-md-4">
@@ -17,3 +17,4 @@
 </div>
     <input type="submit" value="Confirm">
 </form>
+{% endblock %}

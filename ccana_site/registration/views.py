@@ -44,7 +44,7 @@ def attend(request):
           email = data['email']
           update_dict['id']=data['id']
           update_dict['first_name']=name[0]
-          update_dict['last_name']=name[1]
+          update_dict['last_name']=" ".join(name[1:])
           if (data['phone']!=''):
               update_dict['phone']=data['phone']
           if (data['email']!=''):

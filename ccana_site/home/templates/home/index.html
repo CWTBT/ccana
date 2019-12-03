@@ -1,11 +1,17 @@
 {% load static %}
 <html>
   <head>
-    <title>CCANA Home Page</title>
+    <title>
+        {% block title %}
+        CCANA Home Page
+        {% endblock %}
+      </title>
     <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Sunshiney|Josefin+Sans|Indie+Flower&display=swap" rel="stylesheet">
+      {% block extraresources %}{% endblock %}
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="{% static 'home/images/ChildcareAwareWebLogo.ico' %}">
   </head>
   <body>
     <div id = "page-head" class ="jumbotron" style="background-color: transparent">
@@ -13,24 +19,45 @@
     </div>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
+        <div class = "navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-items" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="nav-items">
           <ul class="nav navbar-nav nav-fill">
-            <li><a href="#"> Home </a></li>
-            <li><a href="#"> Parents </a></li>
-            <li><a href="#"> Provider </a></li>
-            <li><a href="#"> Staff </a></li>
-            <li><a href="#"> Sponsors </a></li>
-            <li><a href="#"> Training/Events </a></li>
-            <li><a href="#"> Child Care Options </a></li>
+            <li><a href="/"> Home </a></li>
+            <li><a href="/parents"> Parents </a></li>
+            <li><a href="/providers"> Provider </a></li>
+            <li><a href="/staff"> Staff </a></li>
+            <li><a href="/sponsors"> Sponsors </a></li>
+            <li><a href="/registration"> Training/Events </a></li>
+            <li><a href="/contact_us"> Contact Us </a></li>
           </ul>
+        </div>
+
       </div>
     </nav>
-    <div id="motto" class = "container-fluid">
-      <div class = "page-header">
-        <h1 class="text-center"> Northcentral Arkansas Most Trusted Childcare Resource </h1>
+    {% block content %}
+    <div id="motto">
+      <div class="border2">
+        <div class="container-fluid">
+          <h1 class="text-center"> Northcentral Arkansas Most Trusted Childcare Resource </h1>
+        </div>
       </div>
     </div>
-    <div class="container-fluid page-header">
+    <div>
+      <div id="rectangle"></div>
+    </div>
+    <div class="container-fluid border">
       <p class="text-center"><strong>Child Care Aware of Northcentral Arkansas is a community child care resource and referral program providing services in fourteen Northcentral Arkansas counties. The program helps parents locate child care through a database of licensed and registered facilities based upon that family's needs all free of charge.</strong></p>
+    </div>
+    <div>
+      <div id="rectangle"></div>
     </div>
     <div class="container-fluid h-50">
       <h3 class="text-center"> Our service is designed to:</h3>
@@ -45,11 +72,32 @@
       </ul>
     </div>
 
+    <div class="container">
+      <img src="{% static "home/images/CountiesMap.jpg" %}">
+    </div>
 
+
+    <script src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  {% endblock %}
   </body>
   <footer>
-    <div class="jumbotron-fluid">
-      <div class = "container-fluid">
+    <div class="jumbotron jumbotron-fluid">
+      <div class = "container">
+        <div class="row">
+          <div class="col-sm-4">
+            <p>
+              <span><strong>Child Care Aware of Northcentral Arkansas</strong></span>
+              <span>P.O. Box 2396</span>
+              <span>Batesville, AR 72503</span>
+            </p>
+            <p>
+              <span> Phone: 800-737-2237 or 870-793-5233 </span>
+              <span> FAX: 870-793-4035 </span>
+              <span> Email: info@ccana.org</span>
+          </div>
+
+        </div>
       </div>
     </div>
   </footer>
