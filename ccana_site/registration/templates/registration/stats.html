@@ -1,0 +1,20 @@
+{% extends "home/index.html" %}
+{% block title %} Event Statistics {% endblock %}
+
+{% block content%}
+<h1>Query of all User info</h1>
+{% for user in users %}
+<div class="row">
+  <p>{{user.first_name}} {{user.last_name}} <br>
+  {{user.email}}<br>
+  {{user.phone}}</p>
+</div>
+{% endfor %}
+<h1>Query of Event attendanec</h1>
+{% for event in event_attendance%}
+<div class="row">
+  <p>{{event.name}}<br>
+  {{event.attendees}}</p>
+</div>
+{% endfor %}
+{% endblock %}
