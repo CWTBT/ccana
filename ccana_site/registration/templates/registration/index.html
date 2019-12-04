@@ -1,5 +1,8 @@
 {% extends "home/index.html" %}
 {% load static %}
+{% block extraresources%}
+<link rel="stylesheet" type="text/css" href="{% static 'registration/style.css' %}">
+{% endblock %}
 {% block title %} Upcoming Events {% endblock %}
 
 {% block content %}

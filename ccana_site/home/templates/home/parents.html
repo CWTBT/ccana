@@ -1,25 +1,9 @@
 {% extends "home/index.html"%}
 {% load static %}
-  <head>
-    <title>
-      {% block title %}
-      CCANA Parents Page
-      {% endblock %}
-  </head>
-  <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-          <ul class="nav navbar-nav nav-fill">
-            <li><a href="/"> Home </a></li>
-            <li><a href="#"> Parents </a></li>
-            <li><a href="/providers"> Provider </a></li>
-            <li><a href="/staff"> Staff </a></li>
-            <li><a href="/sponsors"> Sponsors </a></li>
-            <li><a href="#"> Training/Events </a></li>
-            <li><a href="#"> Help me find Child Care </a></li>
-          </ul>
-      </div>
-    </nav>
+{% block title %}
+CCANA Parents Page
+{% endblock %}
+
 {% block content %}
     <div class="container">
       <img src="{% static "home/images/ParentsPageImage.jpg" %}" class="img-responsive"></img>
@@ -72,4 +56,3 @@
       </ul>
     </div>
     {% endblock %}
-</body>
