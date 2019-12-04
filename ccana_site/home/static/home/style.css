@@ -188,7 +188,7 @@ li{
 }
 
 .row {
- max-width: 100%;
+ width: 100%;
  text-align: center;
 }
 
@@ -198,7 +198,7 @@ footer{
 }
 
 .container-fluid{
-  max-width: 100%;
+  width: 100%;
   overflow: auto;
   padding: 0px;
   margin: 15px;
