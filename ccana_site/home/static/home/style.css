@@ -2,21 +2,17 @@ body{
   font-family: 'Josefin Sans', cursive;
 }
 
-#CCANA-icon{
-  width:50%;
-  height:50%;
-  float:left;
-}
-
 #page-head{
+  height: 450px;
   background-image: url("images/BannerImage.PNG");
 }
 
 
 .jumbotron {
-  margin: 25px;
+  margin: 0px;
+  padding: inherit;
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size:100% 100%;
   background-position: center center;
   text-align: center;
 
@@ -139,6 +135,8 @@ h1{
 h3{
   font-size: 40px;
   font-variant: small-caps;
+  padding-bottom: 30px;
+  text-decoration: underline;
 }
 
 a{
@@ -191,7 +189,8 @@ footer{
   width: 100%;
   overflow: auto;
   padding: 0px;
-  margin: 15px;
+  margin-left: 0px;
+  margin-right: 0px;
   display: inline-block;
 }
 
@@ -219,4 +218,9 @@ footer{
   margin-bottom: 80px;
   background-color: #014990;
   display: inline-block;
+}
+
+.jumbotron.jumbotron-fluid{
+  float: left;
+  width: 100%;
 }
