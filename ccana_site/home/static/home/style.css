@@ -15,12 +15,13 @@ body{
   background-size:100% 100%;
   background-position: center center;
   text-align: center;
-
+  width: 100%;
 }
 
 .jumbotron.jumbotron-fluid{
   padding-top: 0px;
   padding-bottom: 7px;
+  width: 100%;
 }
 
 
@@ -186,9 +187,12 @@ li{
   font-size: 20px;
 }
 
-.row-fluid{
+.row{
  width: 100%;
  text-align: center;
+ margin-left: 0px;
+ margin-right: 0px;
+
 }
 
 footer{
@@ -230,8 +234,8 @@ footer p{
   height: 7px;
   margin-left: 15%;
   margin-right: 15%;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 70px;
+  margin-bottom: 70px;
   background-color: #014990;
   display: inline-block;
 }
@@ -251,19 +255,13 @@ footer p{
 .col-sm-8{
   display: inline-block;
   align-items:center;
+  text-align: left;
 
 }
 
 span{
   float: left;
-<<<<<<< HEAD
 }
 footer a{
   font-size: 15px;
-}
-div{
-  justify-content: center;
-  align-content: center;
-=======
->>>>>>> 3ae16491c521f399eb23e421c5facee537d5e62f
 }
