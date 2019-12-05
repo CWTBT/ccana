@@ -132,7 +132,7 @@ nav li{
 }
 
 h1{
-  font-size: 60px;
+  font-size: 6vw;
   text-align: center;
   overflow-x:auto;
   display: inline-block;
@@ -172,16 +172,6 @@ p{
   display: inline-block;
 }
 
-.border2{
-  border: 10px;
-  border-style: double;
-  border-color: #ee3023;
-  display: inline-block;
-  margin-left: 8px;
-  margin-right: 8px;
-  padding: 20px;
-  align-content: center;
-}
 
 li{
   font-size: 20px;
@@ -206,6 +196,7 @@ footer p{
 }
 
 .container-fluid{
+  position:relative;
   width: 100%;
   overflow: auto;
   padding: 0px;
@@ -214,8 +205,18 @@ footer p{
   display:inline-block;
 }
 
-#motto{
-  height: 320px;
+.centered{
+  width:50%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.motto{
+  height: 280px;
+  width:100%;
   margin-top: 0px;
   margin-bottom: 20px;
   padding: 30px;
@@ -227,6 +228,30 @@ footer p{
   display: flex;
   overflow: auto;
   flex-wrap: wrap;
+  border: 10px;
+  border-style: double;
+  border-color: #ee3023;
+  box-shadow: 0px 0px 0px 5px #ee3023 inset;
+}
+
+.motto2{
+  height: 150px;
+  width:100%;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding: 30px;
+  justify-content: center;
+  align-content: center;
+  font-variant: small-caps;
+  background-color: #014990;
+  color: white;
+  display: flex;
+  overflow: auto;
+  flex-wrap: wrap;
+  border: 10px;
+  border-style: double;
+  border-color: #ee3023;
+  box-shadow: 0px 0px 0px 5px #ee3023 inset;
 }
 
 #rectangle{
