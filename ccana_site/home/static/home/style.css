@@ -175,7 +175,9 @@ p{
 
 li{
   font-size: 20px;
+  padding-top: 5px;
 }
+
 
 .row{
  width: 100%;
@@ -255,10 +257,10 @@ footer p{
 }
 
 #rectangle{
-  width: 70%;
+  width: 50%;
   height: 7px;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 25%;
+  margin-right: 25%;
   margin-top: 70px;
   margin-bottom: 70px;
   background-color: #014990;
@@ -281,7 +283,11 @@ footer p{
   display: inline-block;
   align-items:center;
   text-align: left;
+}
 
+.map{
+  width: 35%;
+  height: 70%;
 }
 
 span{
