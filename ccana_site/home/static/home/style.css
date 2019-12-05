@@ -226,12 +226,12 @@ footer p{
 }
 
 #rectangle{
-  width: 50%;
+  width: 70%;
   height: 7px;
-  margin-left: 25%;
-  margin-right: 25%;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 2em;
+  margin-bottom: 2em;
   background-color: #014990;
   display: inline-block;
 }
@@ -256,6 +256,7 @@ footer p{
 
 span{
   float: left;
+<<<<<<< HEAD
 }
 footer a{
   font-size: 15px;
@@ -263,4 +264,6 @@ footer a{
 div{
   justify-content: center;
   align-content: center;
+=======
+>>>>>>> 3ae16491c521f399eb23e421c5facee537d5e62f
 }
