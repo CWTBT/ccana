@@ -234,6 +234,7 @@ footer p{
   border-style: double;
   border-color: #ee3023;
   box-shadow: 0px 0px 0px 5px #ee3023 inset;
+  text-shadow: 1.5px 1.5px #ee3023;
 }
 
 .motto2{
