@@ -2,7 +2,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
-
+from django.db.models import Count
 from .forms import AttendanceForm
 from .models import Event, Attendance, User
 from datetime import datetime
@@ -12,7 +12,6 @@ class IndexView(generic.ListView):
     context_object_name = 'event_list'
 
     def get_queryset(self):
-        """Return the last five published questions."""
         return Event.objects.order_by('-start_time').reverse().filter(end_time__gt = datetime.now())
 
 class EventCreate(generic.edit.CreateView):
@@ -29,6 +28,14 @@ class EventUpdate(generic.edit.UpdateView):
 class EventDelete(generic.edit.DeleteView):
     model = Event
     success_url = '/registration'
+
+class EventStats(generic.base.TemplateView):
+    template_name = 'registration/stats.html'
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        context_data['users'] = User.objects.all()
+        context_data['event_attendance'] = Event.objects.annotate(attendees = Count('attendance'))
+        return context_data
 
 def attend(request):
    form = AttendanceForm()

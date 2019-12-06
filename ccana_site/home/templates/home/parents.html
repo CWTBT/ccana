@@ -5,54 +5,84 @@ CCANA Parents Page
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="container-fluid">
       <img src="{% static "home/images/ParentsPageImage.jpg" %}" class="img-responsive"></img>
+      <div class="centered">
+        <div class="motto2">
+          <h1 class="text-center"> Parents </h1>
+        </div>
+      </div>
     </div>
     <div id="rectangle"></div>
     <div class="container-fluid border">
-      <p class="text-center"> We are ready to assist you in locating your child care options in Northcentral Arkansas. To place a referral online, refer to the navigation pane to the right and click on "Help Me Find Child Care". Fill out the required information and a referral agent will contact you shortly.</h3>
+      <p class="text-center"> We are ready to assist you in locating your child care options in Northcentral Arkansas. To place a referral online, refer to the navigation pane above and click on "Help Me Find Child Care". Fill out the required information and a referral agent will contact you shortly.</p>
     </div>
-    <div>
+    <div id="rectangle"></div>
+    <div class="container">
+      <div class="row">
+        <h3 class="text-center"> Our services include:</h3>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+          <ul>
+            <li>A complete, up-to-date listing of registered and licensed child care homes, centers, preschools and Mother’s Day Out programs in your area.</li>
+            <li>Information on how to choose a child care provider.</li>
+            <li>A parent's checklist for evaluating the quality of a child care program.</li>
+            <li>Assistance in solving problems.</li>
+            <li>Opt in for email updates and newsletters.</li>
+            <li>Referrals to other service programs.</li>
+          </ul>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
       <div id="rectangle"></div>
-    </div>
-    <div class="container-fluid h-50">
-      <h3 class="text-center"> Our services include:</h3>
-      <ul>
-        <li>A complete, up-to-date listing of registered and licensed child care homes, centers, preschools and Mother’s Day Out programs in your area.</li>
-        <li>Information on how to choose a child care provider.</li>
-        <li>A parent's checklist for evaluating the quality of a child care program.</li>
-        <li>Assistance in solving problems.</li>
-        <li>Opt in for email updates and newsletters.</li>
-        <li>Referrals to other service programs.</li>
-      </ul>
-    </div>
-    <div>
+      <div class="row">
+        <h3 class="text-center"> When searching for care, look for those who...</h3>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+        <ul>
+          <li>Enjoy working with young children.</li>
+          <li>Give young children plenty of individual attention.</li>
+          <li>Understand how young children learn.</li>
+          <li>Speak gently to children.</li>
+          <li>Establish routines for activities.</li>
+          <li>Are responsive to parents' concerns about their children.</li>
+          <li>Accept and discipline children through helping, teaching, and learning.</li>
+        </ul>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
       <div id="rectangle"></div>
-    </div>
-    <div class="container-fluid h-50">
-      <h3 class="text-center"> When searching for care, look for those who...</h3>
-      <ul>
-        <li>Enjoy working with young children.</li>
-        <li>Give young children plenty of individual attention.</li>
-        <li>Understand how young children learn.</li>
-        <li>Speak gently to children.</li>
-        <li>Establish routines for activities.</li>
-        <li>Are responsive to parents' concerns about their children.</li>
-        <li>Accept and discipline children through helping, teaching, and learning.</li>
-      </ul>
-    </div>
-    <div>
+      <div class="row">
+        <h3 class="text-center"> Also look for...</h3>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+        <ul>
+          <li>Clean, pleasant surroundings.</li>
+          <li>Nutritious meals and snacks that are varied, attractive, and served at appropriate times.</li>
+          <li>A balance of active and quiet play times.</li>
+          <li>Age-appropriate toys, books, art and music materials.</li>
+          <li>Indoor and outdoor play areas that are safe and secure, and promote a child's urge to explore.</li>
+        </ul>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
       <div id="rectangle"></div>
+      <div class="row">
+        <h3 class="text-center"> Quality Child Care...</h3>
+        <p class="text-center">Your children deserve the very best care and education possible...as early as possible. Better Beginnings, Arkansas' quality rating system for child care, connects Arkansas families with information and care that helps your children experience a safe, happy, healthy childhood. Click the link below for more information on Better Beginnings.</p>
+      </div>
+      <div class="row">
+        <a href="https://www.arbetterbeginnings.com/">
+          <img src="{% static "home/images/ARBB-logo.png" %}">
+        </a>
+      </div>
+      <!--
+      <div id="rectangle"></div>
+      <div class="row">
+        <h3 class="text-center"> Become a Parent Advocate</h3>
+        <p class="text-center">As a parent, have you ever wondered how you can become more involved with your children and improve thier quality of care? Now you can!
+        Click the link below to be re-directed to Child Care Aware of America's Parent Network page and check out all of the great information they provide for parents. You can sign up to receive thier montly newsletter and learn how to be a better advocate for your child. </p>
+      </div>
+      -->
     </div>
-    <div class="container-fluid h-50">
-      <h3 class="text-center"> Also look for...</h3>
-      <ul>
-        <li>Clean, pleasant surroundings.</li>
-        <li>Nutritious meals and snacks that are varied, attractive, and served at appropriate times.</li>
-        <li>A balance of active and quiet play times.</li>
-        <li>Age-appropriate toys, books, art and music materials.</li>
-        <li>Indoor and outdoor play areas that are safe and secure, and promote a child's urge to explore.</li>
-        <li>Click Here to Download a Better Beginnings Checklist</li>
-      </ul>
-    </div>
-    {% endblock %}
+{% endblock %}
