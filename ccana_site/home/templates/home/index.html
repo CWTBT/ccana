@@ -108,8 +108,14 @@
               <span> FAX: 870-793-4035 </span>
               <span> Email: <a href="mailto:info@ccana.org">info@ccana.org</a></span>
           </div>
-          <div class="col-sm-4"></div>
-          <div class="col-sm-4"></div>
+          <div class="col-sm-4">
+            <a href="/admin">Admin Backend</a>
+          </div>
+          <div class="col-sm-4">
+            {% if user.is_staff %}
+            <a href="/registration/stats">Usage Statistics</a>
+            {% endif %}
+            </div>
         </div>
     </div>
   </footer>

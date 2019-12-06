@@ -1,3 +1,6 @@
 from django.contrib import admin
+from registration.models import Event, User
+from django.http import HttpResponseRedirect
 
-# Register your models here.
+admin.site.register(Event)
+admin.site.register(User)
