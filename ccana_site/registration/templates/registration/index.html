@@ -11,18 +11,21 @@
       <ul>
     {% for event in event_list %}
     <div class="row">
-
-      <p class="small-text right">{{event.id}}</p>
-        <h2>{{ event.name }}</h2>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10 text-left">
+        <p class="small-text right">{{event.id}}</p>
+        <h2 class="text-left">{{ event.name }}</h2>
         <p>Location: {{event.location}} </p>
         <span><p>{{event.start_time}} - {{event.end_time}}</p></span>
         <p>{{ event.description }}</p>
       </div>
+      <div class="col-sm-1"></div>
+    </div>
     <hr>
     {% endfor %}
     </ul>
 </div>
 {% else %}
-    <p>There are no events scheduled in the near future.</p>
+    <h1>There are no events scheduled in the near future.</h1>
 {% endif %}
 {% endblock %}

@@ -1,8 +1,7 @@
 .jumbotron {
-  margin: 25px;
-  background-image: url("images/ChildcareAwareLogoTemp.PNG");
+  margin: 0px;
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size: 100% 100%;
   background-position: center center;
 }
 
@@ -16,4 +15,30 @@
 
 .right {
   float: right;
+}
+
+#main{
+  margin-left: 20px;
+  margin-right: 50%;
+}
+
+.fieldWrapper{
+
+
+}
+span{
+  text-align: center;
+  padding:5px;
+}
+p{
+  width:100%;
+  float:left;
+  margin:5px;
+  padding: inherit;
+  font-size: 2vw;
+}
+
+h2{
+  font-size: 3.5vw;
+
 }
