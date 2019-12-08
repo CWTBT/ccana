@@ -1,4 +1,8 @@
 from django.urls import path
+<<<<<<< HEAD
+from home import views
+=======
+>>>>>>> master
 
 from . import views
 
