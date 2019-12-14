@@ -15,13 +15,11 @@
     <link rel="shortcut icon" href="{% static 'home/images/ChildcareAwareWebLogo.ico' %}">
   </head>
   <body>
-    <div class = "container-fluid">
-      <div class="row">
+    <div class="contianer-fluid">
+
+        <div class="row">
         <div id = "page-head" class ="jumbotron" style="background-color: transparent"></div>
-      </div>
-      <div class="row">
           <nav class="navbar navbar-default">
-            <div class="row">
               <div class = "navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-items" aria-expanded="false">
                   <span class="sr-only">Toggle navigation</span>
@@ -30,7 +28,6 @@
                   <span class="icon-bar"></span>
                 </button>
               </div>
-            </div>
             <div class="collapse navbar-collapse" id="nav-items">
               <ul class="nav navbar-nav nav-fill">
                 <li><a href="/"> Home </a></li>
@@ -43,37 +40,29 @@
               </ul>
             </div>
           </nav>
-      </div>
+        </div>
     </div>
+    <div class="container">
       {% block content %}
       <div class="row">
         <div class="motto">
           <h1 class="text-center"> Northcentral Arkansas Most Trusted Childcare Resource </h1>
         </div>
       </div>
-      <div>
         <div id="rectangle"></div>
-      </div>
-      <div class="container-fluid">
         <div style="background-color: #014990;" class="row border">
           <div class="col-sm-6">
-            <img class = "img-responsive" src ="{% static "home/images/child-home-page.jpg" %}"></img>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fccanaconway%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="500" style="margin:2em;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
           </div>
           <div class="col-sm-6">
-            <p style="color: white;" class="text-center"><strong>Child Care Aware of Northcentral Arkansas is a community child care resource and referral program providing services in fourteen Northcentral Arkansas counties. The program helps parents locate child care through a database of licensed and registered facilities based upon that family's needs all free of charge.</strong></p>
+            <p style="color: white;" class="text-right"><strong>Child Care Aware of Northcentral Arkansas is a community child care resource and referral program providing services in fourteen Northcentral Arkansas counties. The program helps parents locate child care through a database of licensed and registered facilities based upon that family's needs all free of charge.</strong></p>
           </div>
         </div>
-      </div>
-      <div>
         <div id="rectangle"></div>
-      </div>
-      <div class="row">
-        <h3 class="text-center"> Our service is designed to:</h3>
-      </div>
+
 
       <div class="row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-8">
+        <h3 class="text-center"> Our service is designed to:</h3>
           <ul>
             <li>Empower parents by providing information on child development and criteria to use in choosing appropriate, high quality child care for their children.</li>
             <li>Facilitate parent choice through appropriate referrals to licensed or registered child care providers.</li>
@@ -83,8 +72,6 @@
             <li>Be a trend spotter through careful data collection.</li>
             <li>Be a Community Change Agent through advocacy and partnership building.</li>
           </ul>
-        </div>
-        <div class="col-sm-2"></div>
       </div>
 
       <div class="row text-center">
