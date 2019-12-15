@@ -141,7 +141,6 @@ h1{
 h3 {
   font-size: 35px;
   font-variant: small-caps;
-  text-decoration: underline;
 }
 
 a {
@@ -154,6 +153,7 @@ p {
   margin-right: 10%;
   margin-top: 30px;
   margin-bottom: 30px;
+  font-weight: lighter;
 }
 
 .col-sm-4 {
