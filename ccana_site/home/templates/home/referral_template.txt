@@ -1,0 +1,8 @@
+Contact Name:
+{{ referral_name }}
+
+Email:
+{{ referal_email }}
+
+Content:
+{{ form_content|safe|striptags }}

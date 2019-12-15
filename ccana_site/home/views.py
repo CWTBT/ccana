@@ -57,4 +57,39 @@ def contact(request):
 
     return render(request, 'home/contact_us.html', {
         'form': form_class,
+
+def referral(request):
+    form_class = ReferralForm
+    if request.method == "POST":
+       form = ReferralForm(request.POST)
+       if form.is_valid():
+                contact_name = request.POST.get(
+                    'referral_name'
+                , '')
+                contact_email = request.POST.get(
+                    'referral_email'
+                , '')
+                form_content = request.POST.get('referral', '')
+
+                template = get_template('home/referral_template.txt')
+                context = {
+                    'referral_name': contact_name,
+                    'referral_email': contact_email,
+                    'form_content': form_content,
+                }
+                content = template.render(context)
+
+                email = EmailMessage(
+                    "New referral form submission",
+                    content,
+                    "CCANA" +'',
+                    ['pintered@hendrix.edu'],
+                    headers = {'Reply-To': contact_email },
+                )
+                print("sending to")
+                email.send()
+                return HttpResponseRedirect('referral')
+
+    return render(request, 'home/referral.html', {
+        'form': form_class,
     })
