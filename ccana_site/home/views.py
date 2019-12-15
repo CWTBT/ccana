@@ -70,12 +70,26 @@ def referral(request):
                 contact_email = request.POST.get(
                     'referral_email'
                 , '')
-                form_content = request.POST.get('referral', '')
+                from_time = request.POST.get(
+                    'from_time'
+                , '')
+                to_time = request.POST.get(
+                    'to_time'
+                , '')
+                needed_days = request.POST.get(
+                    'needed_days'
+                , '')
+                form_content = request.POST.get(
+                    'form_content'
+                , '')
 
                 template = get_template('home/referral_template.txt')
                 context = {
                     'referral_name': contact_name,
                     'referral_email': contact_email,
+                    'from_time': from_time,
+                    'to_time': to_time,
+                    'needed_days': needed_days,
                     'form_content': form_content,
                 }
                 content = template.render(context)
@@ -85,7 +99,7 @@ def referral(request):
                     content,
                     "CCANA" +'',
                     ['pintered@hendrix.edu'],
-                    headers = {'Reply-To': contact_email },
+                    headers = {'Reply-To': referral_email },
                 )
                 print("sending to")
                 email.send()
