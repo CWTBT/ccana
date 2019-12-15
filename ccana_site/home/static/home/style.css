@@ -270,6 +270,7 @@ footer p{
   padding-bottom: 3px;
   white-space: pre-line;
   display:block;
+  float: left;
 }
 .col-sm-8{
   display: inline-block;
@@ -290,4 +291,14 @@ footer p{
 
 footer a{
   font-size: 15px;
+}
+
+.col-sm-10 span{
+  float: left;
+}
+
+
+.fieldWrapper{
+  margin-right: 70%;
+  padding-bottom: 1%;
 }

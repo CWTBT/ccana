@@ -5,6 +5,13 @@
   background-position: center center;
 }
 
+.row {
+ text-align: center;
+ margin-left: 0px;
+ margin-right: 0px;
+ margin-bottom: 0px;
+}
+
 .large-text {
   font-size: 1.5em;
 }
@@ -41,4 +48,42 @@ p{
 h2{
   font-size: 3.5vw;
 
+}
+.motto{
+  height: 30%;
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 2em;
+  justify-content: center;
+  align-content: center;
+  font-variant: small-caps;
+  background-color: #014990;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  border: 10px;
+  border-style: double;
+  border-color: #ee3023;
+  text-shadow: 1.5px 1.5px #ee3023;
+}
+
+.motto2{
+  height: 25%;
+  width:100%;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding: 30px;
+  justify-content: center;
+  align-content: center;
+  font-variant: small-caps;
+  background-color: #014990;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  border: 10px;
+  border-style: double;
+  border-color: #ee3023;
+  box-shadow: 0px 0px 0px 5px #ee3023 inset;
+  text-align: center;
 }
