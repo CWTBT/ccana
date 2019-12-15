@@ -15,8 +15,6 @@
     <link rel="shortcut icon" href="{% static 'home/images/ChildcareAwareWebLogo.ico' %}">
   </head>
   <body>
-    <div class="container-fluid">
-
         <div class="row">
         <div id = "page-head" class ="jumbotron" style="background-color: transparent"></div>
           <nav class="navbar navbar-default">
@@ -31,6 +29,13 @@
             <div class="collapse navbar-collapse" id="nav-items">
               <ul class="nav navbar-nav nav-fill">
                 <li><a href="/"> Home </a></li>
+                <li class="dropdown">
+                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parents <span class="caret"></span></a>
+                   <ul class="dropdown-menu">
+                     <li><a href="/parents">Info</a></li>
+                     <li><a href="/Referral">Help Me Find Childcare</a></li>
+                   </ul>
+                 </li>
                 <li><a href="/parents"> Parents </a></li>
                 <li><a href="/providers"> Providers </a></li>
                 <li><a href="/staff"> Staff </a></li>
@@ -41,7 +46,6 @@
             </div>
           </nav>
         </div>
-    </div>
     <div class="container">
       {% block content %}
       <div class="row">

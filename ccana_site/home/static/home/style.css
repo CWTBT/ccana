@@ -34,6 +34,7 @@ body{
   border-color: #c0392b;
   margin:0px;
   border-radius: 0px;
+  z-index: 10000;
 }
 .navbar-default .navbar-brand {
   color: #ecf0f1;
