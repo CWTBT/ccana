@@ -57,6 +57,7 @@ def contact(request):
 
     return render(request, 'home/contact_us.html', {
         'form': form_class,
+    })
 
 def referral(request):
     form_class = ReferralForm
