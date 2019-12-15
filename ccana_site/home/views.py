@@ -20,6 +20,9 @@ def staff(request):
 def sponsors(request):
     return render(request, 'home/sponsors.html')
 
+def referral(request):
+    return render(request, 'home/referral.html')
+
 def contact(request):
     form_class = ContactForm
     if request.method == "POST":
