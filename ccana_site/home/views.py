@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
-from home.forms import ContactForm
+from home.forms import ContactForm, ReferralForm
 from django import forms
 from django.core.mail import EmailMessage
 from django.template.loader import get_template

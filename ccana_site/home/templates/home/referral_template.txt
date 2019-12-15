@@ -1,8 +1,17 @@
-Contact Name:
+Name:
 {{ referral_name }}
 
 Email:
-{{ referal_email }}
+{{ referral_email }}
+
+FromTime:
+{{ from_time }}
+
+ToTime:
+{{ to_time }}
+
+NeededDays:
+{{ needed_days }}
 
 Content:
 {{ form_content|safe|striptags }}
