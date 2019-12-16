@@ -1,31 +1,23 @@
 {% extends "home/index.html"%}
 {% load static %}
+{% load widget_tweaks %}
 {% block title %}
 Referral page
 {% endblock %}
 
 {% block content %}
 
-<form method="post">
-{%csrf_token%}
-
-
-<div class = "container-fluid">
-  {% for field in form %}
-      <div class="fieldWrapper">
-          {{ field.errors }}
-          {{ field.label_tag }}
-      {% if field.field.required %}
-          <span style="color:red">*</span>
-      {% endif %} {{ field }}
-          {% if field.help_text %}
-          <p class="help">{{ field.help_text|safe }}</p>
-          {% endif %}
-      </div>
-  {% endfor %}
-    <input type="submit" value="Save">
+<div class="container-fluid">
+  <form method="post">
+    {%csrf_token%}
+    {% for field in form %}
+    <div class="form-group">
+      {{field.label_tag}}
+      {% render_field field class="form-control" %}
+    </div>
+    {% endfor %}
+  </form>
 </div>
-</form>
 
 
 

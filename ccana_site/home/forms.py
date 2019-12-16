@@ -11,4 +11,3 @@ class ReferralForm(forms.Form):
     referral_email = forms.EmailField(required=True)
     from_time = forms.TimeField(required=True)
     to_time = forms.TimeField(required=True)
-    needed_days = forms.ChoiceField(choices=["Monday-Friday", "Saturday-Sunday", "Other"], required=True)
