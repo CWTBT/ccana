@@ -298,8 +298,15 @@ footer a{
   float: left;
 }
 
+.col-sm-5{
+  margin-top:5%;
+}
 
 .fieldWrapper{
   margin-right: 70%;
   padding-bottom: 1%;
+}
+
+form{
+  margin-top: 5%;
 }
