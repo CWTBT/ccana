@@ -6,6 +6,9 @@ class Event(models.Model):
     location = models.CharField(max_length=120)
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
+    is_conference = models.BooleanField(default=False)
+    hosting = models.BooleanField(default=True)
+    type = models.CharField(max_length=120)
 
     def __str__(self):
         return self.name
