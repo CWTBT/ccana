@@ -6,7 +6,7 @@ from django.core import validators
 
 class AttendanceForm(forms.Form):
     event = forms.ModelChoiceField(queryset=Event.objects.order_by('-start_time').reverse().filter(end_time__gt = datetime.now()),empty_label=None)
-    id = forms.IntegerField()
+    id = forms.IntegerField(label="Educator ID")
     name = forms.CharField(max_length=300)
     email = forms.CharField(max_length=200,required=False,validators=[validators.validate_email])
     phone = forms.RegexField(regex=r'^\+?1?\d{9,15}$', required=False,
