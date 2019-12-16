@@ -2,19 +2,23 @@
 {% block title %} Event Statistics {% endblock %}
 
 {% block content%}
-<h1>Query of all User info</h1>
-{% for user in users %}
+<h2>Query of all User info</h2>
 <div class="row">
+{% for user in users %}
+<div class="col-md-4">
   <p>{{user.first_name}} {{user.last_name}} <br>
-  {{user.email}}<br>
-  {{user.phone}}</p>
+  Email: {{user.email}}<br>
+  Phone: {{user.phone}}</p>
 </div>
 {% endfor %}
-<h1>Query of Event attendance</h1>
-{% for event in event_attendance%}
+</div>
+<h2>Query of Event attendance</h2>
 <div class="row">
+{% for event in event_attendance%}
+<div class="col-md-4">
   <p>{{event.name}}<br>
   {{event.attendees}}</p>
 </div>
 {% endfor %}
+</div>
 {% endblock %}
