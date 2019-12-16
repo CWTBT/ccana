@@ -1,27 +1,35 @@
 {% extends "home/index.html" %}
+{% load static %}
 {% block title %} Attendance {% endblock %}
 {% block content%}
-<form method="post">
-{%csrf_token%}
-
-{% if form.fields.event.queryset %}
-
-{% for field in form %}
-    <div class="fieldWrapper">
-        {{ field.errors }}
-        {{ field.label_tag }}
-    {% if field.field.required %}
-        <span style="color:red">*</span>
-    {% endif %} {{ field }}
-        {% if field.help_text %}
-        <p class="help">{{ field.help_text|safe }}</p>
-        {% endif %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="motto2">
+      <h1> SIGN UP </h1>
     </div>
-{% endfor %}
-  <input type="submit" value="Save">
-{% else %}
-<p>There are no upcoming or ongoing events for you to attend.</p>
-{% endif %}
-</form>
+  </div>
+  <form method="post">
+  {%csrf_token%}
+
+  {% if form.fields.event.queryset %}
+
+  {% for field in form %}
+      <div class="fieldWrapper">
+          {{ field.errors }}
+          {{ field.label_tag }}
+      {% if field.field.required %}
+          <span style="color:red">*</span>
+      {% endif %} {{ field }}
+          {% if field.help_text %}
+          <p class="help">{{ field.help_text|safe }}</p>
+          {% endif %}
+      </div>
+  {% endfor %}
+    <input type="submit" value="Save">
+  {% else %}
+  <p>There are no upcoming or ongoing events for you to attend.</p>
+  {% endif %}
+  </form>
+</div>
 
 {% endblock %}
