@@ -1,7 +1,7 @@
-Name:
+Referral Name:
 {{ referral_name }}
 
-Email:
+Referral Email:
 {{ referral_email }}
 
 FromTime:
