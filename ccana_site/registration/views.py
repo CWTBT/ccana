@@ -12,22 +12,10 @@ class IndexView(generic.ListView):
     context_object_name = 'event_list'
 
     def get_queryset(self):
-        return Event.objects.order_by('-start_time').reverse().filter(end_time__gt = datetime.now())
-
-class EventCreate(generic.edit.CreateView):
-    model = Event
-    fields = ['name', 'description','location','start_time','end_time']
-    success_url = '/registration'
-
-class EventUpdate(generic.edit.UpdateView):
-    model = Event
-    fields = ['name', 'description','location','start_time','end_time']
-    template_name_suffix = '_update_form'
-    success_url = '/registration'
-
-class EventDelete(generic.edit.DeleteView):
-    model = Event
-    success_url = '/registration'
+        context_data = {}
+        context_data['conferences']=Event.objects.order_by('-start_time').reverse().filter(end_time__gt = datetime.now()).filter(is_conference=True)
+        context_data['events']=Event.objects.order_by('-start_time').reverse().filter(end_time__gt = datetime.now()).filter(is_conference=False)
+        return context_data
 
 class EventStats(generic.base.TemplateView):
     template_name = 'registration/stats.html'
@@ -35,6 +23,7 @@ class EventStats(generic.base.TemplateView):
         context_data = super().get_context_data(**kwargs)
         context_data['users'] = User.objects.all()
         context_data['event_attendance'] = Event.objects.annotate(attendees = Count('attendance'))
+        context_data['popular_types'] = Event.objets.anno
         return context_data
 
 def attend(request):
