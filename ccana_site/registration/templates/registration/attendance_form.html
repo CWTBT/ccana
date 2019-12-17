@@ -3,7 +3,6 @@
 {% load widget_tweaks %}
 {% block title %} Attendance {% endblock %}
 {% block content%}
-
 {% if form.fields.event.queryset %}
 
   <div class="row">
@@ -11,6 +10,11 @@
       <h1> Attendance Form </h1>
     </div>
   </div>
+  {% if messages %}
+      {% for message in messages %}
+      <h2  {% if message.tags %} class="{{ message.tags }}" {% endif %}> {{ message }} </h2>
+  {% endfor %}
+  {% endif %}
   <form method="post">
   {%csrf_token%}
   {% for field in form %}
@@ -24,5 +28,11 @@
 {% else %}
   <p>There are no upcoming or ongoing events for you to attend.</p>
   {% endif %}
+{% endblock %}
 
+
+{% block extrascript %}
+<script type="text/javascript">
+$(".messages").fadeOut(3000);
+</script>
 {% endblock %}

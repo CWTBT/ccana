@@ -6,6 +6,7 @@ from django.db.models import Avg, Count
 from .forms import AttendanceForm
 from .models import Event, Attendance, User
 from datetime import datetime
+from django.contrib import messages
 
 class IndexView(generic.ListView):
     template_name = 'registration/index.html'
@@ -28,8 +29,6 @@ class EventStats(generic.base.TemplateView):
         return context_data
 
 def attend(request):
-   form = AttendanceForm()
-   print('serving attend')
    if request.method == "POST":
       print('attendance post')
       form = AttendanceForm(request.POST)
@@ -50,7 +49,8 @@ def attend(request):
           (u,_) = User.objects.filter(pk=data['id']).update_or_create(update_dict)
           a = Attendance(user = u,event = event)
           a.save()
-          return HttpResponseRedirect('/')
+          messages.success(request, 'Form submission successful')
+   form = AttendanceForm()
    errors = form.errors or None
    return render(request, 'registration/attendance_form.html',{
           'form': form,

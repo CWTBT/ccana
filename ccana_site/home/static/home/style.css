@@ -321,3 +321,8 @@ form{
   max-width: 100%;
   height: auto;
 }
+
+.success {
+  color:Green;
+  text-align: center;
+}
