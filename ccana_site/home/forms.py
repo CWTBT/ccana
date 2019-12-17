@@ -26,8 +26,10 @@ class ReferralForm(forms.Form):
         ("White", "White")]
     referral_name = forms.CharField(required=True)
     referral_email = forms.EmailField(required=True)
-    from_time = forms.TimeField(required=True)
-    to_time = forms.TimeField(required=True)
+    from_time = forms.TimeField(input_formats=('%I:%M %p',), required=True,
+        error_messages = {"invalid":"Please enter a time in the following format: HH:MM AM/PM"})
+    to_time = forms.TimeField(input_formats=('%I:%M %p',), required=True,
+        error_messages = {"invalid":"Please enter a time in the following format: HH:MM AM/PM"})
     type = forms.ChoiceField(choices=type_c, required=True)
     days = forms.ChoiceField(choices=days_c, required=True)
     first_date = forms.DateField(label="First Child DOB (dd/mm/yyyy)", required=True)
