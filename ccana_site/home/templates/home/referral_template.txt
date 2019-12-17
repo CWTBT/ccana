@@ -4,14 +4,47 @@ Referral Name:
 Referral Email:
 {{ referral_email }}
 
-FromTime:
+From:
 {{ from_time }}
 
-ToTime:
+To:
 {{ to_time }}
 
-NeededDays:
-{{ needed_days }}
+Type:
+{{ type }}
 
-Content:
-{{ form_content|safe|striptags }}
+Days:
+{{ days }}
+
+First Child DOB:
+{{ first_date }}
+
+Second Child DOB:
+{{ second_date }}
+
+Third Child DOB:
+{{ third_date }}
+
+Employer:
+{{ employer }}
+
+Spouse's Employer:
+{{ spouse_employer }}
+
+Address:
+{{ address }}
+
+City:
+{{ city }}
+
+State:
+{{ state }}
+
+Zip Code:
+{{ zip }}
+
+County:
+{{ county }}
+
+Phone:
+{{ phone }}
