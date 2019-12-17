@@ -45,10 +45,9 @@ def contact(request):
                     "New contact form submission",
                     content,
                     "CCANA" +'',
-                    ['pintered@hendrix.edu'],
+                    ['test@test.com'],
                     headers = {'Reply-To': contact_email },
                 )
-                print("sending to")
                 email.send()
                 return HttpResponseRedirect('contact_us')
 

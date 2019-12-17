@@ -2,7 +2,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
-from django.db.models import Count
+from django.db.models import Avg, Count
 from .forms import AttendanceForm
 from .models import Event, Attendance, User
 from datetime import datetime
@@ -23,7 +23,8 @@ class EventStats(generic.base.TemplateView):
         context_data = super().get_context_data(**kwargs)
         context_data['users'] = User.objects.all()
         context_data['event_attendance'] = Event.objects.annotate(attendees = Count('attendance'))
-        context_data['popular_types'] = Event.objets.anno
+        context_data['popular_types'] = Event.objects.values('type').annotate(attendees = Count('attendance'))
+        print(context_data['popular_types'])
         return context_data
 
 def attend(request):
