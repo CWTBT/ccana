@@ -1,6 +1,7 @@
 ## Table of Contents
 - [What is Child Care Aware?](#what-is-child-care-aware)
 - [Installation](#installation)
+- [Usage](#usage)
 - [Credits](#credits)
 
 # ccana
@@ -18,6 +19,16 @@ Django can be installed with the following command:
 
 Additionally, this website also uses the *django-widget-tweaks* library
 to render its forms. [Check out its repository](https://github.com/jazzband/django-widget-tweaks) for installation instructions.
+
+### Usage
+As with any Django website, you can launch the server with
+
+`python3 manage.py runserver`
+
+Most content served is static. The bulk of user-interaction (Referral Form, Contact Us) is self explanatory, as it primarily consists of simple forms.
+
+Most admin interaction will come in the form of adding events to the registration page. This is handled through Django's built-in admin back-end and forms. 
+
 
 ### Credits
 - [ericpinter](https://github.com/ericpinter)
