@@ -12,12 +12,22 @@
 </div>
 {% endfor %}
 </div>
+
 <h2>Query of Event attendance</h2>
 <div class="row">
 {% for event in event_attendance%}
 <div class="col-md-4">
   <p>{{event.name}}<br>
   {{event.attendees}}</p>
+</div>
+{% endfor %}
+</div>
+
+<h2>Query of Type Popularity</h2>
+<div class="row">
+{% for event_type in popular_types%}
+<div class="col-md-4">
+  <p>{{event_type.type}}: {{event_type.attendees}} attendees</p>
 </div>
 {% endfor %}
 </div>
