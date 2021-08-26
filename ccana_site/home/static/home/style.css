@@ -186,6 +186,15 @@ li{
  padding-bottom: 1%;
 }
 
+.row-condense {
+  text-align: center;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  width: 50%;
+  padding-bottom: 1%;
+}
+
 footer{
   width: 100%;
   min-height: 100px;
