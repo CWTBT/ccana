@@ -192,8 +192,8 @@ li{
 
 .row-condense {
   text-align: center;
-  margin-left: 5px;
-  margin-right: 5px;
+  padding-left: 2em;
+  padding-right: 2em;
   margin-bottom: 0px;
   width: 50%;
   padding-bottom: 1%;
